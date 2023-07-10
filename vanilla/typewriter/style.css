@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+:root {
+    --bg-color: rgb(250, 237, 237);
+    --typewriter-char: 13;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    width: 70vw;
+    height: 50vh;
+}
+
+.editor,
+.typewriter {
+    width: 50%;
+    min-height: 30vh;
+    border: 1px solid #333;
+    padding: 1rem;
+}
+
+#convert {
+    margin: 2rem;
+    background-color: #333;
+    padding: 1rem 5rem;
+    color: beige;
+    font-size: large;
+}
+
+
+.typewriter {
+    font-family: "Source Code Pro", monospace;
+}
+
+/* 
+h1::before,
+h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+h1::before {
+    background: var(--bg-color);
+    animation: typewriter 2s steps(var(--typewriter-char)) 100ms forwards;
+}
+
+h1::after {
+    width: 0.125rem;
+    background: black;
+    animation: typewriter 2s steps(var(--typewriter-char)) 100ms forwards,
+        blink 500ms steps(30) forwards infinite;
+}
+
+
+
+
+} */
+
+
+#cursor {
+    background: #000000;
+    opacity: 1;
+    font-size: 10px;
+    font-weight: 100;
+    font: 1em sans-serif;
+    animation: typewriter 2s steps(var(--typewriter-char)) 100ms forwards,
+        blink 500ms steps(30) forwards infinite;
+}
+
+@keyframes blink {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes typewriter {
+    to {
+        opacity: 1;
+    }
+}
